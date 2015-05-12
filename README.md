@@ -33,6 +33,8 @@ That's it! You can then read and write this preference as you would a normal mod
 
 Along with the name of the preference attribute, you can also (optionally) provide a `default` value for preferences and a `type`. A preference's `type` will be inferred from its `default` if no `type` is provided but a `default` is.
 
+If no `default` or `type` is provided, values will (as you'd expect) default to `nil` and will be typecast as a string when being accessed.
+
     class User < ActiveAdmin::Base
       has_preference time_zone: { type: :string }
       has_preference language: { type: :string, default: "Japanese" }

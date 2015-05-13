@@ -6,7 +6,9 @@ Sometimes storing preference data for users (or other types of object) can resul
 
 In your Gemfile:
 
-    gem "preferential"
+``` ruby
+gem "preferential"
+```
 
 ## Usage
 
@@ -17,19 +19,23 @@ First, you'll need to generate a migration to create the preferences table:
 
 You can then define preferences for your models like this:
 
-    class User < ActiveAdmin::Base
-      has_preference :time_zone
-      has_preference :language
-      has_preference :send_newsletter
-    end
+```ruby
+class User < ActiveAdmin::Base
+  has_preference :time_zone
+  has_preference :language
+  has_preference :send_newsletter
+end
+```
 
 That's it! You can then read and write this preference as you would a normal model attribute:
 
-    user = User.find(3)
-    user.time_zone # => "JST"
-    user.language = "Japanese"
-    user.language # => "Japanese"
-    user.send_newsletter? # => true
+```ruby
+user = User.find(3)
+user.time_zone # => "JST"
+user.language = "Japanese"
+user.language # => "Japanese"
+user.send_newsletter? # => true
+```
 
 ### Advanced Configuration
 
@@ -37,11 +43,13 @@ Along with the name of the preference attribute, you can also (optionally) provi
 
 If no `default` or `type` is provided, values will (as you'd expect) default to `nil` and will be typecast as a string when being accessed.
 
-    class User < ActiveAdmin::Base
-      has_preference time_zone: { type: :string }
-      has_preference language: { type: :string, default: "Japanese" }
-      has_preference send_newsletter: { default: false }
-    end
+```ruby
+class User < ActiveAdmin::Base
+  has_preference time_zone: { type: :string }
+  has_preference language: { type: :string, default: "Japanese" }
+  has_preference send_newsletter: { default: false }
+end
+```
 
 The accepted values for `type` are:
 
@@ -52,6 +60,8 @@ The accepted values for `type` are:
 
 You can also define multiple preferences at once:
 
-    class User < ActiveAdmin::Base
-      has_preference time_zone: { type: :string }, language: { type: :string, default: "Japanese" }
-    end
+```ruby
+class User < ActiveAdmin::Base
+  has_preference time_zone: { type: :string }, language: { type: :string, default: "Japanese" }
+end
+```

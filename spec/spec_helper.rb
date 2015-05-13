@@ -10,6 +10,7 @@ require "preferential"
 ActiveRecord::Migration.verbose = false
 ActiveRecord::Base.establish_connection(adapter: "sqlite3",
                                         database: ":memory:")
+ActiveRecord::Base.logger = Logger.new(File.dirname(__FILE__) + "/../test.log")
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods

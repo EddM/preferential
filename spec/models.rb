@@ -6,10 +6,12 @@ class User < ActiveRecord::Base
 end
 
 class UserWithSinglePreference < ActiveRecord::Base
+  self.table_name = "users"
   has_preference private_mode: { default: true }
 end
 
 class UserWithSinglePreferenceNoDefault < ActiveRecord::Base
+  self.table_name = "users"
   has_preference :private_mode
 end
 

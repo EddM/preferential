@@ -2,7 +2,7 @@
 
 Sometimes storing preference data for users (or other types of object) can result in database tables with tons of very infrequently-accessed columns. This isn't always a problem, especially if you optimise your queries everywhere - but sometimes doing this is unwieldy. **Preferential** is a Rails gem that can make the extraction of this "metadata" to another table quick and painless.
 
-![CircleCI Status](https://circleci.com/gh/EddM/preferential.svg?style=shield&circle-token=28c17efa9666b8e9de0bd05d5d8ade4069ef33d8)
+[![CircleCI Status](https://circleci.com/gh/EddM/preferential.svg?style=shield&circle-token=28c17efa9666b8e9de0bd05d5d8ade4069ef33d8)](https://circleci.com/gh/EddM/preferential/tree/master)
 
 ## Installation
 

@@ -1,0 +1,9 @@
+machine:
+  ruby:
+    version: 2.1.5
+test:
+  override:
+    - bundle exec rspec --colour --order rand --format documentation
+database:
+  override:
+    - echo 'no need for database'

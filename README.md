@@ -10,8 +10,8 @@ TBD
 
 First, you'll need to generate a migration to create the preferences table:
 
-    $ rails generate preferential migration
-    $ rake db:migrate
+    $ [bundle exec] rails generate preferential migration
+    $ [bundle exec] rake db:migrate
 
 You can then define preferences for your models like this:
 

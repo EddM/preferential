@@ -14,7 +14,7 @@ gem "preferential"
 
 First, you'll need to generate a migration to create the preferences table:
 
-    $ [bundle exec] rails generate preferential migration
+    $ [bundle exec] rails generate preferential:migration
     $ [bundle exec] rake db:migrate
 
 You can then define preferences for your models like this:

@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Preferential::Generators::MigrationGenerator, type: :generator do
   destination File.expand_path("../../../../tmp", __FILE__)
-  arguments %w(migration)
+  arguments %w(preferential)
 
   before :all do
     prepare_destination

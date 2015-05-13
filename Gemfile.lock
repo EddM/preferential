@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    preferential (0.0.1)
+      activerecord (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,9 +87,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 3.2)
   database_cleaner
   factory_girl
   generator_spec
+  preferential!
   rspec
   sqlite3

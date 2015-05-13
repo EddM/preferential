@@ -5,6 +5,6 @@ module Preferential
     belongs_to :owner, polymorphic: true
 
     validates :name, presence: true
-    validates :owner_id, uniqueness: { scope: [:owner_type, :name], message: "x" }
+    validates :owner_id, uniqueness: { scope: [:owner_type, :name] }
   end
 end

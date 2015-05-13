@@ -4,6 +4,7 @@ require "preferential/base/callbacks"
 require "preferential/base"
 require "preferential/preference"
 require "preferential/preference_definition"
+require "preferential/version"
 
 require "generators/preferential/migration_generator"
 
@@ -22,4 +23,5 @@ module Preferential
   end
 end
 
+# Extend ActiveRecord models with the +has_preferences+ functionality
 ActiveRecord::Base.send :include, Preferential::Base

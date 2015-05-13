@@ -1,4 +1,6 @@
 module Preferential
+  # +PreferenceDefinition+ encapsulates one preference defined
+  # in a +has_preferences+ call.
   class PreferenceDefinition
     attr_reader :name, :default
 

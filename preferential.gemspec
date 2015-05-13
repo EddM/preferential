@@ -8,4 +8,12 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*", "README.md"]
   s.homepage = "https://github.com/EddM/preferential"
   s.license = "GPL"
+
+  s.add_dependency "activerecord", "~> 3.2"
+
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "generator_spec"
+  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "factory_girl"
+  s.add_development_dependency "database_cleaner"
 end

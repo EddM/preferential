@@ -4,7 +4,9 @@ Sometimes storing preference data for users (or other types of object) can resul
 
 ## Installation
 
-TBD
+In your Gemfile:
+
+    gem "preferential"
 
 ## Usage
 
